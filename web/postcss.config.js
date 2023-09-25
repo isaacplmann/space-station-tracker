@@ -11,7 +11,7 @@ const cssnano = require('cssnano')({
 });
 module.exports = {
     plugins: [
-        require('tailwindcss')('tailwind.config.js'),
+        require('tailwindcss')('web/tailwind.config.js'),
         ...(process.env.NODE_ENV === 'production' ? [cssnano] : []),
         ...(process.env.NODE_ENV === 'production' ? [autoprefixer] : []),
     ],

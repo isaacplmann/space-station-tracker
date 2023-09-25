@@ -50,10 +50,6 @@
         "vite-plugin-eslint": "^1.8.1"
     },
     "scripts": {
-        "build": "tsc && vite build",
-        "dev": "vite",
-        "lint": "eslint src",
-        "preview": "vite preview",
         "test:ci": "NODE_OPTIONS=--experimental-vm-modules CI=true jest"
     },
     "browserslist": {

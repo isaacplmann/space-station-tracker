@@ -1,0 +1,34 @@
+{
+    "name": "@space-station-tracker/web",
+    "tags": ["scope:web"],
+    "targets": {
+        "build": {
+            "executor": "@nx/vite:build",
+            "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+            "options": {
+                "outputPath": "dist/web"
+            }
+        },
+        "dev":  {
+            "executor": "@nx/vite:dev-server",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "buildTarget": "@space-station-tracker/web:build"
+            }
+        },
+        "lint": {
+            "executor": "@nx/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["{projectRoot}/src", "{projectRoot}/package.json"]
+            }
+        },
+        "preview": {
+            "executor": "@nx/vite:preview-server",
+            "outputs": ["{options.outputPath}"],
+            "options": {
+                "buildTarget": "@space-station-tracker/web:build"
+            }
+        }
+    }
+}
