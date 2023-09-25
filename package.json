@@ -10,7 +10,7 @@
         "typescript": "^5.1.6"
     },
     "scripts": {
-        "build": "npm run compile --workspace=server && npm run build --workspace=web",
+        "build": "npm run build --workspace=server && npm run build --workspace=web",
         "dev": "concurrently --prefix \"[{name}]\" --names \"SERVER,WEB\" -c \"bgMagenta.bold,bgBlue.bold,bgGreen.bold\" \"npm run dev:server\" \"npm run dev:web\"",
         "dev:server": "npm run dev --workspace=server",
         "dev:web": "npm run dev --workspace=web",

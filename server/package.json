@@ -24,7 +24,7 @@
         "typescript": "^5.1.6"
     },
     "scripts": {
-        "compile": "tsc",
+        "build": "tsc",
         "dev": "tsc-watch --build ./tsconfig.json --onSuccess \"node ../dist/server/index.js\"",
         "start": "node ../dist/server/index.js",
         "test:ci": "NODE_OPTIONS=--experimental-vm-modules CI=true jest"
