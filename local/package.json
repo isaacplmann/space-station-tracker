@@ -2,7 +2,7 @@
     "name": "local",
     "version": "0.0.1",
     "dependencies": {
-        "@nx/devkit": "16.7.4"
+        "@nx/devkit": "16.9.0"
     },
     "type": "commonjs",
     "main": "./src/index.js",

@@ -1,47 +1,73 @@
 {
-    "extends": ["../.eslintrc.json", "airbnb", "airbnb-typescript", "prettier"],
-    "plugins": ["simple-import-sort", "@typescript-eslint", "prettier"],
-    "ignorePatterns": ["!**/*"],
-    "overrides": [
-        {
-            "files": ["jest.setup.ts"],
-            "rules": {
-                "import/no-extraneous-dependencies": "off"
-            }
-        },
-        {
-            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-            "rules": {}
-        },
-        {
-            "files": ["*.ts", "*.tsx"],
-            "rules": {}
-        },
-        {
-            "files": ["*.js", "*.jsx"],
-            "rules": {}
-        },
-        {
-            "files": ["*.test.tsx"],
-            "rules": {
-                "import/no-extraneous-dependencies": "off"
-            }
-        },
-        {
-            "files": "*.json",
-            "parser": "jsonc-eslint-parser",
-            "rules": {}
-        }
-    ],
-    "rules": {
-        "@typescript-eslint/dot-notation": "off",
-        "@typescript-eslint/naming-convention": "off",
-        "@typescript-eslint/no-implied-eval": "off",
-        "@typescript-eslint/no-throw-literal": "off",
-        "@typescript-eslint/return-await": "off",
-        "import/prefer-default-export": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/jsx-props-no-spreading": "off",
-        "react/require-default-props": "off"
+  "extends": [
+    "../.eslintrc.json",
+    "airbnb",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "plugins": [
+    "simple-import-sort",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "ignorePatterns": [
+    "!**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "jest.setup.ts"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.js",
+        "*.jsx"
+      ],
+      "rules": {}
+    },
+    {
+      "files": [
+        "*.test.tsx"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": "*.json",
+      "parser": "jsonc-eslint-parser",
+      "rules": {}
     }
+  ],
+  "rules": {
+    "@typescript-eslint/dot-notation": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "@typescript-eslint/no-implied-eval": "off",
+    "@typescript-eslint/no-throw-literal": "off",
+    "@typescript-eslint/return-await": "off",
+    "import/prefer-default-export": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off"
+  }
 }
