@@ -1,33 +1,35 @@
 {
-    "name": "space-station-tracker",
-    "version": "1.2.0",
-    "main": "dist/server/index.js",
-    "private": true,
-    "devDependencies": {
-        "concurrently": "^8.2.0",
-        "husky": "^8.0.3",
-        "lint-staged": "^13.2.3",
-        "typescript": "^5.1.6"
-    },
-    "scripts": {
-        "build": "npm run build --workspace=server && npm run build --workspace=web",
-        "dev": "concurrently --prefix \"[{name}]\" --names \"SERVER,WEB\" -c \"bgMagenta.bold,bgBlue.bold,bgGreen.bold\" \"npm run dev:server\" \"npm run dev:web\"",
-        "dev:server": "npm run dev --workspace=server",
-        "dev:web": "npm run dev --workspace=web",
-        "format": "prettier --write .",
-        "lint": "prettier --check .",
-        "prepare": "node ./.husky/prepare.js",
-        "start": "npm run start --workspace=server",
-        "test": "npm run test:ci --workspace=server && npm run test:ci --workspace=web"
-    },
-    "engines": {
-        "node": "20.x"
-    },
-    "lint-staged": {
-        "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
-    },
-    "workspaces": [
-        "server",
-        "web"
-    ]
+  "name": "space-station-tracker",
+  "version": "1.2.0",
+  "main": "dist/server/index.js",
+  "private": true,
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "typescript": "^5.1.6",
+    "nx": "16.7.4",
+    "nx-cloud": "latest"
+  },
+  "scripts": {
+    "build": "npm run build --workspace=server && npm run build --workspace=web",
+    "dev": "concurrently --prefix \"[{name}]\" --names \"SERVER,WEB\" -c \"bgMagenta.bold,bgBlue.bold,bgGreen.bold\" \"npm run dev:server\" \"npm run dev:web\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:web": "npm run dev --workspace=web",
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "prepare": "node ./.husky/prepare.js",
+    "start": "npm run start --workspace=server",
+    "test": "npm run test:ci --workspace=server && npm run test:ci --workspace=web"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
+  },
+  "workspaces": [
+    "server",
+    "web"
+  ]
 }
