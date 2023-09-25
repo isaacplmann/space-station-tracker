@@ -1,0 +1,61 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2021,
+        "project": ["./tsconfig.json"],
+        "sourceType": "module"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "env": {
+        "amd": true,
+        "browser": true,
+        "node": true
+    },
+    "plugins": ["@nx"],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "rules": {
+                "@nx/enforce-module-boundaries": [
+                    "error",
+                    {
+                        "enforceBuildableLibDependency": true,
+                        "allow": [],
+                        "depConstraints": [
+                            {
+                                "sourceTag": "scope:server",
+                                "onlyDependOnLibsWithTags": ["scope:server", "scope:shared"]
+                            },
+                            {
+                                "sourceTag": "scope:web",
+                                "onlyDependOnLibsWithTags": ["scope:web", "scope:shared"]
+                            },
+                            {
+                                "sourceTag": "scope:shared",
+                                "onlyDependOnLibsWithTags": ["scope:shared"]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["**/*.test.tsx"],
+            "env": {
+                "jest": true
+            }
+        },
+        {
+            "files": "*.json",
+            "parser": "jsonc-eslint-parser",
+            "rules": {}
+        }
+    ]
+}

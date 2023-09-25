@@ -26,8 +26,12 @@
     },
     "scripts": {
         "build": "tsc",
+        "lint": "eslint src",
         "dev": "tsc-watch --build ./tsconfig.json --onSuccess \"node ../dist/server/index.js\"",
         "start": "node ../dist/server/index.js",
         "test:ci": "NODE_OPTIONS=--experimental-vm-modules CI=true jest"
+    },
+    "nx": {
+        "tags": ["scope:server"]
     }
 }

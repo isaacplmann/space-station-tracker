@@ -98,5 +98,8 @@
             "node_modules/(?!(d3-geo|react-globe.gl))$",
             "node_modules/(?!three/examples/jsm)$"
         ]
+    },
+    "nx": {
+        "tags": ["scope:web"]
     }
 }

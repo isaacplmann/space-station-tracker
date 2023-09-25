@@ -4,12 +4,16 @@
   "main": "dist/server/index.js",
   "private": true,
   "devDependencies": {
+    "@nx/eslint-plugin": "^16.7.4",
+    "@nx/linter": "^16.7.4",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
     "concurrently": "^8.2.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
-    "typescript": "^5.1.6",
     "nx": "16.7.4",
-    "nx-cloud": "latest"
+    "nx-cloud": "latest",
+    "typescript": "^5.1.6"
   },
   "scripts": {
     "build": "npm run build --workspace=server && npm run build --workspace=web",
