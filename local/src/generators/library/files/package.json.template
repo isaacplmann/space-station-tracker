@@ -1,0 +1,17 @@
+{
+    "name": "<%= name %>",
+    "main": "./src/index.js",
+    "dependencies": {
+        "luxon": "^3.4.0"
+    },
+    "devDependencies": {
+        "@types/luxon": "^3.3.1"
+    },
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint src"
+    },
+    "nx": {
+        "tags": []
+    }
+}

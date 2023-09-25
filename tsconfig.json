@@ -1,23 +1,30 @@
 {
-    "compilerOptions": {
-        "allowJs": false,
-        "baseUrl": ".",
-        "esModuleInterop": true,
-        "lib": ["ESNext"],
-        "module": "CommonJS",
-        "moduleResolution": "Node",
-        "outDir": "dist",
-        "strict": true,
-        "strictNullChecks": true,
-        "target": "ESNext"
-    },
-    "exclude": [
-        "dist",
-        "e2e",
-        "node_modules",
-        "public",
-        "src/**/*.test.ts",
-        "src/**/*.test.tsx",
-        "tests"
-    ]
+  "compilerOptions": {
+    "allowJs": false,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "lib": [
+      "ESNext"
+    ],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "paths": {
+      "local": [
+        "local/src/index.ts"
+      ]
+    }
+  },
+  "exclude": [
+    "dist",
+    "e2e",
+    "node_modules",
+    "public",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "tests"
+  ]
 }
