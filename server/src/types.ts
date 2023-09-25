@@ -1,5 +1,3 @@
-import { DateTime } from 'luxon';
-
 export interface IChannelItem {
     description: string;
     guid: string;
@@ -22,15 +20,4 @@ interface IRSS {
 }
 export interface SpotTheStationResponse {
     rss: IRSS;
-}
-
-export interface ICleanData {
-    approachDeg: string;
-    approachDir: string;
-    date: DateTime | string; // TODO: rework
-    departureDeg: string;
-    departureDir: string;
-    duration: string;
-    maxElevation: string;
-    time: string;
 }

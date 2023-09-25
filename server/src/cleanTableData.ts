@@ -1,6 +1,7 @@
 import { DateTime } from 'luxon';
 
-import { IChannelItem, ICleanData } from './types';
+import { IChannelItem } from './types';
+import { ICleanData } from 'shared';
 
 const FILTER_BY_DEGREES_GREATER_THAN = 20;
 const FILTER_BY_DURATION_GREATER_THAN = 1; // in minutes

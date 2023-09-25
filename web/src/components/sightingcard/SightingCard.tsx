@@ -1,10 +1,11 @@
 import Compass from '@components/compass';
+import { ICleanData } from 'shared';
 
 interface SightingCardProps {
     header?: boolean;
     isSelected?: boolean;
     selectSightingCard?: (sightingCardIndex?: number) => void;
-    sightingData?: any;
+    sightingData?: Partial<ICleanData>;
 }
 
 const defaultProp = {
@@ -37,7 +38,9 @@ function SightingCard({
             onClick={expandCard}
             role="button"
         >
-            <div className={header ? 'indent-4 col-span-3' : 'col-span-3'}>{sightingData.date}</div>
+            <div className={header ? 'indent-4 col-span-3' : 'col-span-3'}>
+                {sightingData.date?.toString()}
+            </div>
             <div className="col-span-2">{sightingData.time}</div>
             <div className="col-span-2">
                 <span className="flex justify-between">
@@ -70,8 +73,8 @@ function SightingCard({
                     </div>
                     <div className="col-span-4">
                         <Compass
-                            entersSky={sightingData.approachDir}
-                            leavesSky={sightingData.departureDir}
+                            entersSky={sightingData.approachDir || ''}
+                            leavesSky={sightingData.departureDir || ''}
                         />
                     </div>
                 </>

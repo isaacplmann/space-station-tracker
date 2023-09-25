@@ -10,6 +10,7 @@
         "react-globe.gl": "^2.24.3",
         "react-select": "^5.7.4",
         "svg-arc": "^1.0.2",
+        "shared": "*",
         "three": "0.155.0"
     },
     "devDependencies": {
